@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目后台</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="icomoon/style.css">
+	<script>
+		function viewmypic(mypic,imgfile) { 
+			var oimg = document.getElementById('imgfile');
+			if (imgfile.value){ 
+			mypic.src=imgfile.value; 
+			mypic.style.display=""; 
+			mypic.border=1; 
+		} 
+} 
+	</script>
+</head>
+<body>
+	<div class="wrapper-out">
+	<div class="wrapper clearfix">
+		<div class="header-line">
+			<div class="logo">
+				<h3>后台logo</h3>
+			</div>
+		</div>
+		<div class="left-side">
+			<ul class="left-side-side">
+				<li><a href="运营账号.html"><i class="icon-play3"></i>运营账号</a></li>
+				<li><a href="热门标签.html"><i class="icon-play3"></i>热门标签</a></li>
+				<li><a href="热门图片.html"><i class="icon-play3"></i>热门图片</a></li>
+				<li class="hover"><a href="教练文章.html"><i class="icon-play3"></i>教练文章</a></li>
+				<li><a href="推荐广告位.html"><i class="icon-play3"></i>推荐广告位</a></li>
+			</ul>
+		</div>
+		<div class="right-side">
+			<div class="right-side-in">
+				<div class="home">
+					<a href="index.html" class="home-img"><img src="img/return-home.png" alt="返回首页"></a>
+					<h2 class="title">教练文章</h2>
+				</div>
+				<div class="tab">
+					<div class="tab-nav">
+						<ul>
+							<li class="active"><a href="教练文章.html">发布文章</a></li>
+							<li><a href="已发布列表.html">已发布列表</a></li>
+						</ul>
+					</div>
+					<div class="tab-con">
+						<div class="con1">
+							<form action="#" class="feed-form">
+								<div class="input-margin">
+									<label for="">标&nbsp;&nbsp;&nbsp;&nbsp;题:&nbsp;&nbsp;</label>
+									<input type="text" class="feed-id-text">
+								</div>
+								<div class="input-margin clearfix">
+								<label for="feed">内容概述：</label>
+								<textarea name="feed-con" cols="50" rows="10" class="feed-textarea"></textarea>
+								</div>
+								<div class="input-margin">
+									<label for="">预&nbsp;&nbsp;览&nbsp;&nbsp;插&nbsp;&nbsp;图：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+									<input name="imgfile" type="file" id="imgfile" size="40" onchange="viewmypic(showimg,this.form.imgfile);" /> <br>
+									<img name="showimg" id="showimg" src="" style="display:none;" alt="预览图片" /> 
+								</div>
+								<div class="input-margin">
+								<label for="feed-id">链&nbsp;&nbsp;&nbsp;&nbsp;接：&nbsp;&nbsp;</label>
+								<input type="text" class="feed-id-text">
+								</div>
+								<div class="input-margin">
+								<label for="feed-id">作&nbsp;&nbsp;&nbsp;&nbsp;者：&nbsp;&nbsp;</label>
+								<input type="text" class="feed-id-text">
+								</div>
+								<div class="input-left input-submit">
+									<input type="submit" class="feed-submit btn btn-green" value="发布">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
